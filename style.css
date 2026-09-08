@@ -1,1 +1,144 @@
+/* Reset cơ bản */
+* {
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ===== YÊU CẦU 2: Liên kết "Chuyển đến Nội dung chính" =====
+   Đây là một "skip link": mặc định ẩn ngoài màn hình,
+   chỉ hiện ra khi người dùng bàn phím nhấn Tab vào nó.
+   Nó trỏ đến #main-content nằm ở phần <main>. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: #000;
+  color: #fff;
+  padding: 10px 16px;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+}
+
+header {
+  background: #f4f4f4;
+  padding: 16px 24px;
+  text-align: center;
+}
+
+/* ===== YÊU CẦU 3 (nhận xét):
+   Trước khi chỉnh sửa, phần tử <li> mặc định của trình duyệt
+   có: display: list-item; hiển thị dấu chấm đầu dòng (list-style: disc);
+   có khoảng thụt lề trái do <ul> tạo ra (padding-inline-start mặc định
+   khoảng 40px); margin trên/dưới bằng 0. Đây là style mặc định của
+   user-agent stylesheet, chưa bị ghi đè bởi CSS nào trong trang. */
+
+/* ===== YÊU CẦU 4: nav dùng inline-block, rộng 80% ===== */
+nav {
+  display: inline-block;
+  width: 80%;
+  margin: 12px auto;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+}
+
+/* ===== YÊU CẦU 5: bộ chọn hậu duệ — chỉ ảnh bên trong nav ===== */
+nav img {
+  width: 10%;
+  height: auto;
+  display: block;
+  margin: 4px auto 0;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 8px;
+}
+
+/* ===== YÊU CẦU 6 & 8: lớp .grid — grid 2 cột, mỗi cột ~40% =====
+   Bộ chọn lớp luôn bắt đầu bằng dấu chấm ".grid" */
+.grid {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: center;  /* căn giữa các cột theo chiều ngang */
+  align-items: center;      /* căn giữa nội dung theo chiều dọc trong ô */
+  row-gap: 20px;
+  column-gap: 20px;
+}
+
+.grid > div {
+  background: #fafafa;
+  border: 1px solid #eee;
+  padding: 12px;
+  text-align: center;
+}
+
+/* ===== YÊU CẦU 7: bộ chọn hậu duệ — chỉ ảnh bên trong .grid ===== */
+.grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== YÊU CẦU 9: lớp .flex — flex-wrap và justify-content ===== */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.flex > div {
+  flex: 1 1 200px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  padding: 12px;
+  text-align: center;
+}
+
+.flex img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #f4f4f4;
+  font-size: 14px;
+}
