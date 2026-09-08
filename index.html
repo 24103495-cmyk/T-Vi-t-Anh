@@ -1,178 +1,82 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giới thiệu ngành Thương mại điện tử</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f6f8;
-            color: #333;
-        }
-
-        header {
-            background-color: #2563eb;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        header h1 {
-            margin-bottom: 10px;
-        }
-
-        nav {
-            background-color: white;
-            text-align: center;
-            padding: 15px;
-        }
-
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #2563eb;
-            font-weight: bold;
-        }
-
-        main {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-
-        section {
-            background-color: white;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 10px;
-        }
-
-        h2 {
-            color: #2563eb;
-        }
-
-        li {
-            margin: 10px 0;
-        }
-
-        .images {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .images img {
-            width: 30%;
-            min-width: 250px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        footer {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bài tập về nhà 2</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- Phần đầu trang -->
-    <header>
-        <h1>THƯƠNG MẠI ĐIỆN TỬ</h1>
-        <p>Ngành học kết hợp giữa kinh doanh và công nghệ</p>
-    </header>
+  <!-- YÊU CẦU 2: neo (anchor) đặt trước, trỏ đến id trên thẻ main -->
+  <a class="skip-link" href="#main-content">Chuyển đến Nội dung chính</a>
 
-    <!-- Menu -->
+  <header>
+    <h1>Bài tập về nhà 2</h1>
+
+    <!-- YÊU CẦU 4 & 5: nav (inline-block, 80%) chứa ảnh (10%) -->
     <nav>
-        <a href="#gioi-thieu">Giới thiệu</a>
-        <a href="#co-hoi">Cơ hội nghề nghiệp</a>
-        <a href="#hinh-anh">Hình ảnh</a>
-        <a href="#lien-ket">Liên kết</a>
+      <ul>
+        <li><a href="#main-content">Trang chủ</a>
+          <img src="icon-home.png" alt="Biểu tượng trang chủ"></li>
+        <li><a href="#main-content">Dự án</a>
+          <img src="icon-project.png" alt="Biểu tượng dự án"></li>
+        <li><a href="#main-content">Liên hệ</a>
+          <img src="icon-contact.png" alt="Biểu tượng liên hệ"></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Nội dung chính -->
-    <main>
+  <!-- YÊU CẦU 2: id="main-content" là đích đến của skip link -->
+  <main id="main-content">
 
-        <!-- Giới thiệu -->
-        <section id="gioi-thieu">
-            <h2>Giới thiệu về Thương mại điện tử</h2>
+    <section>
+      <h2>Bố cục lưới (Grid)</h2>
+      <!-- YÊU CẦU 6, 7, 8: .grid 2 cột ~40%, ảnh rộng 100% -->
+      <div class="grid">
+        <div>
+          <img src="anh1.jpg" alt="Mô tả ảnh 1">
+          <p>Mục lưới 1</p>
+        </div>
+        <div>
+          <img src="anh2.jpg" alt="Mô tả ảnh 2">
+          <p>Mục lưới 2</p>
+        </div>
+        <div>
+          <img src="anh3.jpg" alt="Mô tả ảnh 3">
+          <p>Mục lưới 3</p>
+        </div>
+        <div>
+          <img src="anh4.jpg" alt="Mô tả ảnh 4">
+          <p>Mục lưới 4</p>
+        </div>
+      </div>
+    </section>
 
-            <p>
-                Thương mại điện tử là hoạt động mua bán hàng hóa và cung cấp
-                dịch vụ thông qua Internet. Đây là một lĩnh vực đang phát triển
-                mạnh cùng với quá trình chuyển đổi số.
-            </p>
+    <section>
+      <h2>Bố cục linh hoạt (Flexbox)</h2>
+      <!-- YÊU CẦU 9: .flex với flex-wrap và justify-content -->
+      <div class="flex">
+        <div>
+          <img src="anh5.jpg" alt="Mô tả ảnh 5">
+          <p>Mục flex 1</p>
+        </div>
+        <div>
+          <img src="anh6.jpg" alt="Mô tả ảnh 6">
+          <p>Mục flex 2</p>
+        </div>
+        <div>
+          <img src="anh7.jpg" alt="Mô tả ảnh 7">
+          <p>Mục flex 3</p>
+        </div>
+      </div>
+    </section>
 
-            <p>
-                Sinh viên ngành Thương mại điện tử được học về kinh doanh,
-                marketing, công nghệ thông tin, quản trị website và phân tích
-                dữ liệu.
-            </p>
-        </section>
+  </main>
 
-        <!-- Cơ hội nghề nghiệp -->
-        <section id="co-hoi">
-            <h2>Cơ hội nghề nghiệp</h2>
-
-            <p>Sau khi tốt nghiệp, sinh viên có thể làm nhiều công việc như:</p>
-
-            <ul>
-                <li>Nhân viên kinh doanh thương mại điện tử</li>
-                <li>Chuyên viên Digital Marketing</li>
-                <li>Quản trị website và sàn thương mại điện tử</li>
-                <li>Chuyên viên phân tích dữ liệu</li>
-                <li>Khởi nghiệp kinh doanh online</li>
-            </ul>
-        </section>
-
-        <!-- Hình ảnh -->
-        <section id="hinh-anh">
-            <h2>Hình ảnh về thương mại điện tử</h2>
-
-            <div class="images">
-
-                <img
-                    src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80"
-                    alt="Mua sắm trực tuyến">
-
-                <img
-                    src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=800&q=80"
-                    alt="Thanh toán điện tử">
-
-                <img
-                    src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80"
-                    alt="Kinh doanh trực tuyến">
-
-            </div>
-        </section>
-
-        <!-- Liên kết bên ngoài -->
-        <section id="lien-ket">
-            <h2>Liên kết bên ngoài</h2>
-
-            <p>
-                Bạn có thể tìm hiểu thêm về lập trình web tại:
-            </p>
-
-            <a href="https://www.w3schools.com/" target="_blank">
-                W3Schools - Học lập trình web
-            </a>
-        </section>
-
-    </main>
-
-    <!-- Chân trang -->
-    <footer>
-        <p>Bài tập môn Xây dựng ứng dụng web</p>
-        <p>Chủ đề: Thương mại điện tử</p>
-    </footer>
+  <footer>
+    <p>&copy; 2026 Bài tập về nhà 2</p>
+  </footer>
 
 </body>
 </html>
